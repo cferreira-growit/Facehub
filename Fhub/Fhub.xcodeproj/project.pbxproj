@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		070AEB4E1AF7DE35004BDE58 /* InitialController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070AEB4D1AF7DE35004BDE58 /* InitialController.swift */; };
 		0710D4B81AEEBAF800561946 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0710D4B71AEEBAF800561946 /* User.swift */; };
+		0710D4BB1AEEE29E00561946 /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0710D4BA1AEEE29E00561946 /* EventsTableViewController.swift */; };
+		0710D4BD1AEEF63500561946 /* EventCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0710D4BC1AEEF63500561946 /* EventCustomTableViewCell.swift */; };
 		759B8E4A1AE9CFEC00B500E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759B8E491AE9CFEC00B500E6 /* AppDelegate.swift */; };
 		759B8E4D1AE9CFEC00B500E6 /* Fhub.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 759B8E4B1AE9CFEC00B500E6 /* Fhub.xcdatamodeld */; };
 		759B8E4F1AE9CFEC00B500E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759B8E4E1AE9CFEC00B500E6 /* ViewController.swift */; };
@@ -51,7 +54,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		070AEB4D1AF7DE35004BDE58 /* InitialController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialController.swift; sourceTree = "<group>"; };
 		0710D4B71AEEBAF800561946 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0710D4BA1AEEE29E00561946 /* EventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
+		0710D4BC1AEEF63500561946 /* EventCustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCustomTableViewCell.swift; sourceTree = "<group>"; };
 		759B8E441AE9CFEC00B500E6 /* Fhub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fhub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		759B8E481AE9CFEC00B500E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		759B8E491AE9CFEC00B500E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -130,12 +136,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		070AEB4C1AF7DE1E004BDE58 /* InitialController */ = {
+			isa = PBXGroup;
+			children = (
+				070AEB4D1AF7DE35004BDE58 /* InitialController.swift */,
+			);
+			name = InitialController;
+			sourceTree = "<group>";
+		};
 		0710D4B91AEEBB1200561946 /* Core Data Models */ = {
 			isa = PBXGroup;
 			children = (
 				0710D4B71AEEBAF800561946 /* User.swift */,
 			);
 			name = "Core Data Models";
+			sourceTree = "<group>";
+		};
+		0710D4BE1AEEF67600561946 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				0710D4BA1AEEE29E00561946 /* EventsTableViewController.swift */,
+			);
+			name = Events;
 			sourceTree = "<group>";
 		};
 		759B8E3B1AE9CFEC00B500E6 = {
@@ -277,7 +299,9 @@
 		759B8EA11AE9D14200B500E6 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				070AEB4C1AF7DE1E004BDE58 /* InitialController */,
 				759B8EA31AE9D15300B500E6 /* HeaderController */,
+				0710D4BE1AEEF67600561946 /* Events */,
 				759B8EA21AE9D14A00B500E6 /* CellController */,
 			);
 			name = ViewController;
@@ -286,6 +310,7 @@
 		759B8EA21AE9D14A00B500E6 /* CellController */ = {
 			isa = PBXGroup;
 			children = (
+				0710D4BC1AEEF63500561946 /* EventCustomTableViewCell.swift */,
 			);
 			name = CellController;
 			sourceTree = "<group>";
@@ -408,8 +433,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0710D4BB1AEEE29E00561946 /* EventsTableViewController.swift in Sources */,
+				070AEB4E1AF7DE35004BDE58 /* InitialController.swift in Sources */,
 				0710D4B81AEEBAF800561946 /* User.swift in Sources */,
 				759B8E4F1AE9CFEC00B500E6 /* ViewController.swift in Sources */,
+				0710D4BD1AEEF63500561946 /* EventCustomTableViewCell.swift in Sources */,
 				759B8E4D1AE9CFEC00B500E6 /* Fhub.xcdatamodeld in Sources */,
 				759B8E4A1AE9CFEC00B500E6 /* AppDelegate.swift in Sources */,
 			);

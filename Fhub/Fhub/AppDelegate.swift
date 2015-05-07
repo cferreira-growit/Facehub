@@ -29,6 +29,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FBSDKLoginButton.self
         FBSDKProfilePictureView.self
         
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
+        
         return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
     }
 
