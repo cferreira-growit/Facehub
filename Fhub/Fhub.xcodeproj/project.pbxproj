@@ -11,6 +11,7 @@
 		0710D4B81AEEBAF800561946 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0710D4B71AEEBAF800561946 /* User.swift */; };
 		0710D4BB1AEEE29E00561946 /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0710D4BA1AEEE29E00561946 /* EventsTableViewController.swift */; };
 		0710D4BD1AEEF63500561946 /* EventCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0710D4BC1AEEF63500561946 /* EventCustomTableViewCell.swift */; };
+		07E179FF1AFD0C5D00A904F6 /* EventCustomTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E179FE1AFD0C5D00A904F6 /* EventCustomTableViewHeader.swift */; };
 		759B8E4A1AE9CFEC00B500E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759B8E491AE9CFEC00B500E6 /* AppDelegate.swift */; };
 		759B8E4D1AE9CFEC00B500E6 /* Fhub.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 759B8E4B1AE9CFEC00B500E6 /* Fhub.xcdatamodeld */; };
 		759B8E4F1AE9CFEC00B500E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759B8E4E1AE9CFEC00B500E6 /* ViewController.swift */; };
@@ -58,6 +59,7 @@
 		0710D4B71AEEBAF800561946 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0710D4BA1AEEE29E00561946 /* EventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
 		0710D4BC1AEEF63500561946 /* EventCustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCustomTableViewCell.swift; sourceTree = "<group>"; };
+		07E179FE1AFD0C5D00A904F6 /* EventCustomTableViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCustomTableViewHeader.swift; sourceTree = "<group>"; };
 		759B8E441AE9CFEC00B500E6 /* Fhub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fhub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		759B8E481AE9CFEC00B500E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		759B8E491AE9CFEC00B500E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -318,6 +320,7 @@
 		759B8EA31AE9D15300B500E6 /* HeaderController */ = {
 			isa = PBXGroup;
 			children = (
+				07E179FE1AFD0C5D00A904F6 /* EventCustomTableViewHeader.swift */,
 			);
 			name = HeaderController;
 			sourceTree = "<group>";
@@ -433,6 +436,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07E179FF1AFD0C5D00A904F6 /* EventCustomTableViewHeader.swift in Sources */,
 				0710D4BB1AEEE29E00561946 /* EventsTableViewController.swift in Sources */,
 				070AEB4E1AF7DE35004BDE58 /* InitialController.swift in Sources */,
 				0710D4B81AEEBAF800561946 /* User.swift in Sources */,

@@ -15,6 +15,8 @@ class EventsTableViewController: UIViewController, UITableViewDelegate, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.title = "Eventos"
         configureTabAndNavigationControllers(navigationController?.navigationBar)
         tableView.contentInset.top = CGFloat(50)
         tableView.contentInset.bottom = CGFloat(70)
@@ -29,19 +31,32 @@ class EventsTableViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     //MARK:  - TableVewDataSource
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let  headerCell = tableView.dequeueReusableCellWithIdentifier("EventHeader") as! EventCustomTableViewHeader
+        
+        headerCell.hostName.text = "Beco203"
+        headerCell.hostImageProfile.image = UIImage(named: "beco-icon")
+        headerCell.hostImageProfile.layer.cornerRadius = headerCell.hostImageProfile.frame.size.width/2
+        headerCell.hostImageProfile.layer.masksToBounds = true
+        
+        return headerCell
+    }
+    
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 10
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         var cell = tableView.dequeueReusableCellWithIdentifier("EventCell", forIndexPath: indexPath) as! EventCustomTableViewCell
-        
-        cell.hostName.text = "Beco203"
-        
-        cell.eventIcon.image = UIImage(named: "beco-icon")
-        cell.eventIcon.layer.cornerRadius = cell.eventIcon.frame.size.width/2
-        cell.eventIcon.layer.masksToBounds = true
 
         cell.eventCoverImage.image = UIImage()
         cell.eventCoverImage.image = UIImage(named: "beco-cover")
@@ -57,9 +72,6 @@ class EventsTableViewController: UIViewController, UITableViewDelegate, UITableV
         }
         
         adddGradient(cell.bounds, gradient: cell.eventCoverImage)
-        
-        //parallax(cell.eventCoverImage)
-        
         
         return cell
     }
@@ -87,27 +99,5 @@ class EventsTableViewController: UIViewController, UITableViewDelegate, UITableV
         layer.masksToBounds = true
         
         gradient.layer.addSublayer(layer)
-    }
-    
-    //PARALLAX
-    func parallax(image: UIImageView) {
-        // Set vertical effect
-        let verticalMotionEffect = UIInterpolatingMotionEffect(keyPath: "center.y",
-            type: .TiltAlongVerticalAxis)
-        verticalMotionEffect.minimumRelativeValue = -20
-        verticalMotionEffect.maximumRelativeValue = 20
-        
-        // Set horizontal effect
-        let horizontalMotionEffect = UIInterpolatingMotionEffect(keyPath: "center.x",
-            type: .TiltAlongHorizontalAxis)
-        horizontalMotionEffect.minimumRelativeValue = -20
-        horizontalMotionEffect.maximumRelativeValue = 20
-        
-        // Create parallaxGroup to combine both
-        let parallaxGroup = UIMotionEffectGroup()
-        parallaxGroup.motionEffects = [horizontalMotionEffect, verticalMotionEffect]
-        
-        // Add both effects to your view
-        image.addMotionEffect(parallaxGroup)
     }
 }

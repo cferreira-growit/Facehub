@@ -11,8 +11,6 @@ import UIKit
 
 class EventCustomTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var hostName: UILabel!
-    @IBOutlet weak var eventIcon: UIImageView!
     @IBOutlet weak var eventCoverImage: UIImageView!
     @IBOutlet weak var eventTitle: UILabel!
     @IBOutlet weak var eventDate: UILabel!
