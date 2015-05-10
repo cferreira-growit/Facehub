@@ -7,9 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7586FD6E1AEAC9960077559C /* AppCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7586FD6C1AEAC9960077559C /* AppCore.swift */; };
+		7586FD6F1AEAC9960077559C /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7586FD6D1AEAC9960077559C /* AppColor.swift */; };
+		7586FD761AEAC9F60077559C /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7586FD721AEAC9F60077559C /* Functions.swift */; };
+		7586FD771AEAC9F60077559C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7586FD731AEAC9F60077559C /* Extensions.swift */; };
+		7586FD7B1AEACA530077559C /* AppCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7586FD781AEACA530077559C /* AppCoreData.swift */; };
+		7586FD7C1AEACA530077559C /* AppUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7586FD791AEACA530077559C /* AppUserDefaults.swift */; };
+		7586FD7D1AEACA530077559C /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7586FD7A1AEACA530077559C /* AppViewController.swift */; };
 		759B8E4A1AE9CFEC00B500E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759B8E491AE9CFEC00B500E6 /* AppDelegate.swift */; };
 		759B8E4D1AE9CFEC00B500E6 /* Fhub.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 759B8E4B1AE9CFEC00B500E6 /* Fhub.xcdatamodeld */; };
-		759B8E4F1AE9CFEC00B500E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759B8E4E1AE9CFEC00B500E6 /* ViewController.swift */; };
+		759B8E4F1AE9CFEC00B500E6 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759B8E4E1AE9CFEC00B500E6 /* InitialViewController.swift */; };
 		759B8E521AE9CFEC00B500E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 759B8E501AE9CFEC00B500E6 /* Main.storyboard */; };
 		759B8E541AE9CFEC00B500E6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 759B8E531AE9CFEC00B500E6 /* Images.xcassets */; };
 		759B8E571AE9CFEC00B500E6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 759B8E551AE9CFEC00B500E6 /* LaunchScreen.xib */; };
@@ -50,11 +57,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7586FD6C1AEAC9960077559C /* AppCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCore.swift; sourceTree = "<group>"; };
+		7586FD6D1AEAC9960077559C /* AppColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
+		7586FD721AEAC9F60077559C /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		7586FD731AEAC9F60077559C /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		7586FD781AEACA530077559C /* AppCoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoreData.swift; sourceTree = "<group>"; };
+		7586FD791AEACA530077559C /* AppUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUserDefaults.swift; sourceTree = "<group>"; };
+		7586FD7A1AEACA530077559C /* AppViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
 		759B8E441AE9CFEC00B500E6 /* Fhub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fhub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		759B8E481AE9CFEC00B500E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		759B8E491AE9CFEC00B500E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		759B8E4C1AE9CFEC00B500E6 /* Fhub.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fhub.xcdatamodel; sourceTree = "<group>"; };
-		759B8E4E1AE9CFEC00B500E6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		759B8E4E1AE9CFEC00B500E6 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		759B8E511AE9CFEC00B500E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		759B8E531AE9CFEC00B500E6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		759B8E561AE9CFEC00B500E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -259,6 +273,12 @@
 			isa = PBXGroup;
 			children = (
 				759B8EA61AE9D3E900B500E6 /* Fhub-Bridging-Header.h */,
+				7586FD791AEACA530077559C /* AppUserDefaults.swift */,
+				7586FD781AEACA530077559C /* AppCoreData.swift */,
+				7586FD6C1AEAC9960077559C /* AppCore.swift */,
+				7586FD6D1AEAC9960077559C /* AppColor.swift */,
+				7586FD721AEAC9F60077559C /* Functions.swift */,
+				7586FD731AEAC9F60077559C /* Extensions.swift */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
@@ -266,8 +286,10 @@
 		759B8EA11AE9D14200B500E6 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				7586FD7A1AEACA530077559C /* AppViewController.swift */,
 				759B8EA31AE9D15300B500E6 /* HeaderController */,
 				759B8EA21AE9D14A00B500E6 /* CellController */,
+				759B8E4E1AE9CFEC00B500E6 /* InitialViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -289,7 +311,6 @@
 		759B8EA41AE9D15A00B500E6 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				759B8E4E1AE9CFEC00B500E6 /* ViewController.swift */,
 				759B8E501AE9CFEC00B500E6 /* Main.storyboard */,
 				759B8E531AE9CFEC00B500E6 /* Images.xcassets */,
 				759B8E551AE9CFEC00B500E6 /* LaunchScreen.xib */,
@@ -397,9 +418,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				759B8E4F1AE9CFEC00B500E6 /* ViewController.swift in Sources */,
+				7586FD7B1AEACA530077559C /* AppCoreData.swift in Sources */,
+				759B8E4F1AE9CFEC00B500E6 /* InitialViewController.swift in Sources */,
+				7586FD771AEAC9F60077559C /* Extensions.swift in Sources */,
 				759B8E4D1AE9CFEC00B500E6 /* Fhub.xcdatamodeld in Sources */,
+				7586FD7D1AEACA530077559C /* AppViewController.swift in Sources */,
 				759B8E4A1AE9CFEC00B500E6 /* AppDelegate.swift in Sources */,
+				7586FD6E1AEAC9960077559C /* AppCore.swift in Sources */,
+				7586FD761AEAC9F60077559C /* Functions.swift in Sources */,
+				7586FD7C1AEACA530077559C /* AppUserDefaults.swift in Sources */,
+				7586FD6F1AEAC9960077559C /* AppColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -610,6 +638,7 @@
 				759B8E681AE9CFEC00B500E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		759B8E691AE9CFEC00B500E6 /* Build configuration list for PBXNativeTarget "FhubTests" */ = {
 			isa = XCConfigurationList;
@@ -618,6 +647,7 @@
 				759B8E6B1AE9CFEC00B500E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
