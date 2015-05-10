@@ -1,98 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7549" systemVersion="14D136" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="App" isAbstract="YES" syncable="YES">
-        <attribute name="createdAt" attributeType="Date" syncable="YES"/>
-        <attribute name="parseID" attributeType="String" syncable="YES"/>
-        <attribute name="updatedAt" attributeType="String" syncable="YES"/>
-    </entity>
-    <entity name="Event" representedClassName="EventCoreData" parentEntity="App" syncable="YES">
-        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="address_lat" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="address_long" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="age_restriction" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="datetime" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="email_contact" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="eventFacebookID" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="facebook" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="information" attributeType="String" syncable="YES"/>
-        <attribute name="instagram" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="name" attributeType="String" syncable="YES"/>
-        <attribute name="phone_contact" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="photo_background" optional="YES" attributeType="Binary" syncable="YES"/>
-        <attribute name="photo_cover" optional="YES" attributeType="Binary" syncable="YES"/>
-        <attribute name="photo_profile" attributeType="Binary" syncable="YES"/>
-        <attribute name="price" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="tickets_remain" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="twitter" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="website" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="allParticipants" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="EventParticipant" inverseName="eventObj" inverseEntity="EventParticipant" syncable="YES"/>
-        <relationship name="allPhotos" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="EventPhoto" inverseName="eventObj" inverseEntity="EventPhoto" syncable="YES"/>
-        <relationship name="allPosts" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="EventPost" inverseName="eventObj" inverseEntity="EventPost" syncable="YES"/>
-        <relationship name="createdBy" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="allCreatedEvents" inverseEntity="User" syncable="YES"/>
-    </entity>
-    <entity name="EventParticipant" representedClassName="EventParticipantCoreData" parentEntity="App" syncable="YES">
-        <attribute name="car_available" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
-        <attribute name="display_cpf" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
-        <attribute name="display_home" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
-        <attribute name="display_profile" attributeType="Boolean" defaultValueString="YES" syncable="YES"/>
-        <attribute name="display_rg" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
-        <attribute name="status" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
-        <relationship name="eventObj" maxCount="1" deletionRule="Nullify" destinationEntity="Event" inverseName="allParticipants" inverseEntity="Event" syncable="YES"/>
-        <relationship name="participantObj" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="allGoingEvents" inverseEntity="User" syncable="YES"/>
-    </entity>
-    <entity name="EventPhoto" representedClassName="EventPhotoCoreData" parentEntity="App" syncable="YES">
-        <attribute name="datetime" attributeType="Date" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="photo" attributeType="Binary" syncable="YES"/>
-        <relationship name="eventObj" maxCount="1" deletionRule="Nullify" destinationEntity="Event" inverseName="allPhotos" inverseEntity="Event" syncable="YES"/>
-    </entity>
-    <entity name="EventPost" representedClassName="EventPostCoreData" parentEntity="App" syncable="YES">
-        <attribute name="datetime" attributeType="Date" syncable="YES"/>
-        <attribute name="information" attributeType="String" syncable="YES"/>
-        <relationship name="createdBy" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="allPosts" inverseEntity="User" syncable="YES"/>
-        <relationship name="eventObj" maxCount="1" deletionRule="Nullify" destinationEntity="Event" inverseName="allPosts" inverseEntity="Event" syncable="YES"/>
-    </entity>
-    <entity name="User" representedClassName="UserCoreData" parentEntity="App" syncable="YES">
-        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="address_lat" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="address_long" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="birthday" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="car_available" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
-        <attribute name="cpf" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="email" attributeType="String" syncable="YES"/>
+    <entity name="User" representedClassName="PRODUCT_MODULE_NAME.User" syncable="YES">
         <attribute name="facebookID" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="first_name" attributeType="String" syncable="YES"/>
-        <attribute name="last_name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="photo" optional="YES" attributeType="Binary" syncable="YES"/>
-        <attribute name="rg" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="username" attributeType="String" syncable="YES"/>
-        <relationship name="allCreatedEvents" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Event" inverseName="createdBy" inverseEntity="Event" syncable="YES"/>
-        <relationship name="allFriends" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="UserFriend" inverseName="friendObj" inverseEntity="UserFriend" syncable="YES"/>
-        <relationship name="allGoingEvents" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="EventParticipant" inverseName="participantObj" inverseEntity="EventParticipant" syncable="YES"/>
-        <relationship name="allPosts" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="EventPost" inverseName="createdBy" inverseEntity="EventPost" syncable="YES"/>
-        <relationship name="userConfig" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserConfig" inverseName="userObj" inverseEntity="UserConfig" syncable="YES"/>
-        <relationship name="userNotUse" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserFriend" inverseName="userObj" inverseEntity="UserFriend" syncable="YES"/>
-    </entity>
-    <entity name="UserConfig" representedClassName="UserConfigCoreData" parentEntity="App" syncable="YES">
-        <attribute name="block_push_info" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
-        <attribute name="block_push_notification" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
-        <attribute name="block_push_question" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
-        <attribute name="cellular_full_quality" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
-        <attribute name="private_acc" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
-        <relationship name="userObj" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="userConfig" inverseEntity="User" syncable="YES"/>
-    </entity>
-    <entity name="UserFriend" representedClassName="UserFriendCoreData" parentEntity="App" syncable="YES">
-        <relationship name="friendObj" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="allFriends" inverseEntity="User" syncable="YES"/>
-        <relationship name="userObj" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="userNotUse" inverseEntity="User" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userEmail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userFirstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userLastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userPhoto" optional="YES" attributeType="Date" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Event" positionX="277" positionY="-99" width="128" height="390"/>
-        <element name="EventParticipant" positionX="-207" positionY="-225" width="128" height="165"/>
-        <element name="EventPhoto" positionX="108" positionY="14" width="128" height="105"/>
-        <element name="EventPost" positionX="-99" positionY="282" width="128" height="105"/>
-        <element name="UserConfig" positionX="-353" positionY="315" width="128" height="135"/>
-        <element name="User" positionX="-549" positionY="-111" width="128" height="330"/>
-        <element name="UserFriend" positionX="-173" positionY="8" width="128" height="75"/>
-        <element name="App" positionX="-342" positionY="-72" width="128" height="90"/>
+        <element name="User" positionX="-63" positionY="-18" width="128" height="165"/>
     </elements>
 </model>
