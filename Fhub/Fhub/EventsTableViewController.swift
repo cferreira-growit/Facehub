@@ -16,7 +16,7 @@ class EventsTableViewController: UIViewController, UITableViewDelegate, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = "Eventos"
+        navigationItem.title = "Events"
         configureTabAndNavigationControllers(navigationController?.navigationBar)
         tableView.contentInset.top = CGFloat(50)
         tableView.contentInset.bottom = CGFloat(70)
@@ -78,7 +78,7 @@ class EventsTableViewController: UIViewController, UITableViewDelegate, UITableV
     
     //MARK: - Layout
     func adddGradient(bounds: CGRect, gradient: UIView) {
-        let colorLeft = UIColor(red: 0/255.0, green: 0/255.0, blue: 0.0/255.0, alpha: 1.0).CGColor
+        let colorLeft = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0).CGColor
         let colorRight = UIColor.clearColor().CGColor
         let layer: CAGradientLayer = CAGradientLayer()
         
