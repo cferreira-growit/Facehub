@@ -8,12 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		070AEB4E1AF7DE35004BDE58 /* InitialController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070AEB4D1AF7DE35004BDE58 /* InitialController.swift */; };
-		0710D4B81AEEBAF800561946 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0710D4B71AEEBAF800561946 /* User.swift */; };
 		0710D4BB1AEEE29E00561946 /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0710D4BA1AEEE29E00561946 /* EventsTableViewController.swift */; };
 		0710D4BD1AEEF63500561946 /* EventCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0710D4BC1AEEF63500561946 /* EventCustomTableViewCell.swift */; };
+		750366951B0AC0600033A8D4 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750366941B0AC0600033A8D4 /* Event.swift */; };
+		750366971B0AC06A0033A8D4 /* EventPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750366961B0AC06A0033A8D4 /* EventPost.swift */; };
+		750366991B0AC0700033A8D4 /* EventPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750366981B0AC0700033A8D4 /* EventPhoto.swift */; };
+		7503669B1B0AC0770033A8D4 /* EventParticipant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7503669A1B0AC0770033A8D4 /* EventParticipant.swift */; };
+		7503669D1B0AC07E0033A8D4 /* UserConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7503669C1B0AC07E0033A8D4 /* UserConfig.swift */; };
+		7503669F1B0AC0840033A8D4 /* UserFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7503669E1B0AC0840033A8D4 /* UserFriend.swift */; };
+		750366A11B0AC40E0033A8D4 /* EventStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750366A01B0AC40E0033A8D4 /* EventStorage.swift */; };
+		752E9DFD1B0A9B3300AE96D4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752E9DFC1B0A9B3300AE96D4 /* User.swift */; };
+		752E9DFF1B0A9BF000AE96D4 /* UserStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752E9DFE1B0A9BF000AE96D4 /* UserStorage.swift */; };
+		7587F32F1B0A9D1600AAEAD8 /* AppCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7587F32A1B0A9D1600AAEAD8 /* AppCore.swift */; };
+		7587F3301B0A9D1600AAEAD8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7587F32B1B0A9D1600AAEAD8 /* Extensions.swift */; };
+		7587F3311B0A9D1600AAEAD8 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7587F32C1B0A9D1600AAEAD8 /* Functions.swift */; };
+		7587F3321B0A9D1600AAEAD8 /* ParseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7587F32D1B0A9D1600AAEAD8 /* ParseHandler.swift */; };
+		7587F3331B0A9D1600AAEAD8 /* ParseResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7587F32E1B0A9D1600AAEAD8 /* ParseResult.swift */; };
 		759B8E4A1AE9CFEC00B500E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759B8E491AE9CFEC00B500E6 /* AppDelegate.swift */; };
 		759B8E4D1AE9CFEC00B500E6 /* Fhub.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 759B8E4B1AE9CFEC00B500E6 /* Fhub.xcdatamodeld */; };
-		759B8E4F1AE9CFEC00B500E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759B8E4E1AE9CFEC00B500E6 /* ViewController.swift */; };
 		759B8E521AE9CFEC00B500E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 759B8E501AE9CFEC00B500E6 /* Main.storyboard */; };
 		759B8E541AE9CFEC00B500E6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 759B8E531AE9CFEC00B500E6 /* Images.xcassets */; };
 		759B8E571AE9CFEC00B500E6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 759B8E551AE9CFEC00B500E6 /* LaunchScreen.xib */; };
@@ -55,14 +67,26 @@
 
 /* Begin PBXFileReference section */
 		070AEB4D1AF7DE35004BDE58 /* InitialController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialController.swift; sourceTree = "<group>"; };
-		0710D4B71AEEBAF800561946 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0710D4BA1AEEE29E00561946 /* EventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
 		0710D4BC1AEEF63500561946 /* EventCustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCustomTableViewCell.swift; sourceTree = "<group>"; };
+		750366941B0AC0600033A8D4 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		750366961B0AC06A0033A8D4 /* EventPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventPost.swift; sourceTree = "<group>"; };
+		750366981B0AC0700033A8D4 /* EventPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventPhoto.swift; sourceTree = "<group>"; };
+		7503669A1B0AC0770033A8D4 /* EventParticipant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventParticipant.swift; sourceTree = "<group>"; };
+		7503669C1B0AC07E0033A8D4 /* UserConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserConfig.swift; sourceTree = "<group>"; };
+		7503669E1B0AC0840033A8D4 /* UserFriend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFriend.swift; sourceTree = "<group>"; };
+		750366A01B0AC40E0033A8D4 /* EventStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventStorage.swift; sourceTree = "<group>"; };
+		752E9DFC1B0A9B3300AE96D4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		752E9DFE1B0A9BF000AE96D4 /* UserStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserStorage.swift; sourceTree = "<group>"; };
+		7587F32A1B0A9D1600AAEAD8 /* AppCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCore.swift; sourceTree = "<group>"; };
+		7587F32B1B0A9D1600AAEAD8 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		7587F32C1B0A9D1600AAEAD8 /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		7587F32D1B0A9D1600AAEAD8 /* ParseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseHandler.swift; sourceTree = "<group>"; };
+		7587F32E1B0A9D1600AAEAD8 /* ParseResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseResult.swift; sourceTree = "<group>"; };
 		759B8E441AE9CFEC00B500E6 /* Fhub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fhub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		759B8E481AE9CFEC00B500E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		759B8E491AE9CFEC00B500E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		759B8E4C1AE9CFEC00B500E6 /* Fhub.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fhub.xcdatamodel; sourceTree = "<group>"; };
-		759B8E4E1AE9CFEC00B500E6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		759B8E511AE9CFEC00B500E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		759B8E531AE9CFEC00B500E6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		759B8E561AE9CFEC00B500E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -144,20 +168,26 @@
 			name = InitialController;
 			sourceTree = "<group>";
 		};
-		0710D4B91AEEBB1200561946 /* Core Data Models */ = {
-			isa = PBXGroup;
-			children = (
-				0710D4B71AEEBAF800561946 /* User.swift */,
-			);
-			name = "Core Data Models";
-			sourceTree = "<group>";
-		};
 		0710D4BE1AEEF67600561946 /* Events */ = {
 			isa = PBXGroup;
 			children = (
 				0710D4BA1AEEE29E00561946 /* EventsTableViewController.swift */,
 			);
 			name = Events;
+			sourceTree = "<group>";
+		};
+		752E9DFB1B0A9B2B00AE96D4 /* Parse */ = {
+			isa = PBXGroup;
+			children = (
+				752E9DFC1B0A9B3300AE96D4 /* User.swift */,
+				750366941B0AC0600033A8D4 /* Event.swift */,
+				750366961B0AC06A0033A8D4 /* EventPost.swift */,
+				750366981B0AC0700033A8D4 /* EventPhoto.swift */,
+				7503669A1B0AC0770033A8D4 /* EventParticipant.swift */,
+				7503669C1B0AC07E0033A8D4 /* UserConfig.swift */,
+				7503669E1B0AC0840033A8D4 /* UserFriend.swift */,
+			);
+			name = Parse;
 			sourceTree = "<group>";
 		};
 		759B8E3B1AE9CFEC00B500E6 = {
@@ -268,6 +298,8 @@
 			isa = PBXGroup;
 			children = (
 				759B8E4B1AE9CFEC00B500E6 /* Fhub.xcdatamodeld */,
+				752E9DFE1B0A9BF000AE96D4 /* UserStorage.swift */,
+				750366A01B0AC40E0033A8D4 /* EventStorage.swift */,
 			);
 			name = Storage;
 			sourceTree = "<group>";
@@ -275,7 +307,7 @@
 		759B8E9E1AE9D12E00B500E6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0710D4B91AEEBB1200561946 /* Core Data Models */,
+				752E9DFB1B0A9B2B00AE96D4 /* Parse */,
 				759B8E9F1AE9D13400B500E6 /* Extension */,
 			);
 			name = Model;
@@ -292,6 +324,11 @@
 			isa = PBXGroup;
 			children = (
 				759B8EA61AE9D3E900B500E6 /* Fhub-Bridging-Header.h */,
+				7587F32A1B0A9D1600AAEAD8 /* AppCore.swift */,
+				7587F32B1B0A9D1600AAEAD8 /* Extensions.swift */,
+				7587F32C1B0A9D1600AAEAD8 /* Functions.swift */,
+				7587F32D1B0A9D1600AAEAD8 /* ParseHandler.swift */,
+				7587F32E1B0A9D1600AAEAD8 /* ParseResult.swift */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
@@ -325,7 +362,6 @@
 		759B8EA41AE9D15A00B500E6 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				759B8E4E1AE9CFEC00B500E6 /* ViewController.swift */,
 				759B8E501AE9CFEC00B500E6 /* Main.storyboard */,
 				759B8E531AE9CFEC00B500E6 /* Images.xcassets */,
 				759B8E551AE9CFEC00B500E6 /* LaunchScreen.xib */,
@@ -433,11 +469,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7503669F1B0AC0840033A8D4 /* UserFriend.swift in Sources */,
+				750366951B0AC0600033A8D4 /* Event.swift in Sources */,
 				0710D4BB1AEEE29E00561946 /* EventsTableViewController.swift in Sources */,
+				7587F3301B0A9D1600AAEAD8 /* Extensions.swift in Sources */,
 				070AEB4E1AF7DE35004BDE58 /* InitialController.swift in Sources */,
-				0710D4B81AEEBAF800561946 /* User.swift in Sources */,
-				759B8E4F1AE9CFEC00B500E6 /* ViewController.swift in Sources */,
+				7503669D1B0AC07E0033A8D4 /* UserConfig.swift in Sources */,
+				7587F3311B0A9D1600AAEAD8 /* Functions.swift in Sources */,
+				750366991B0AC0700033A8D4 /* EventPhoto.swift in Sources */,
+				7503669B1B0AC0770033A8D4 /* EventParticipant.swift in Sources */,
+				7587F3321B0A9D1600AAEAD8 /* ParseHandler.swift in Sources */,
+				7587F32F1B0A9D1600AAEAD8 /* AppCore.swift in Sources */,
+				750366A11B0AC40E0033A8D4 /* EventStorage.swift in Sources */,
+				7587F3331B0A9D1600AAEAD8 /* ParseResult.swift in Sources */,
+				750366971B0AC06A0033A8D4 /* EventPost.swift in Sources */,
+				752E9DFD1B0A9B3300AE96D4 /* User.swift in Sources */,
 				0710D4BD1AEEF63500561946 /* EventCustomTableViewCell.swift in Sources */,
+				752E9DFF1B0A9BF000AE96D4 /* UserStorage.swift in Sources */,
 				759B8E4D1AE9CFEC00B500E6 /* Fhub.xcdatamodeld in Sources */,
 				759B8E4A1AE9CFEC00B500E6 /* AppDelegate.swift in Sources */,
 			);
