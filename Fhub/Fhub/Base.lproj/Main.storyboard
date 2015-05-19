@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dwc-fk-uyY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="p9I-do-jFL">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -94,6 +94,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="253" y="384"/>
         </scene>
         <!--My Events Collection View Controller-->
         <scene sceneID="T7H-Fx-hgH">
@@ -485,7 +486,7 @@
         <!--Events Table View Controller-->
         <scene sceneID="lxi-gV-xiQ">
             <objects>
-                <viewController storyboardIdentifier="EventsTableViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="E3f-OC-Idh" customClass="EventsTableViewController" customModule="Fhub" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="E3f-OC-Idh" customClass="EventsTableViewController" customModule="Fhub" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nj5-H3-4tY"/>
                         <viewControllerLayoutGuide type="bottom" id="hhE-1z-kQj"/>
@@ -905,7 +906,7 @@
         <!--Item-->
         <scene sceneID="eZ9-Ko-RBY">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ubO-oS-zyX" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="EventsTableViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ubO-oS-zyX" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="B0j-In-gvs"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mS5-CY-sMX">

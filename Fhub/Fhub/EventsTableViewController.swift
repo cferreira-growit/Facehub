@@ -17,10 +17,13 @@ class EventsTableViewController: UIViewController, UITableViewDelegate, UITableV
         super.viewDidLoad()
         
         navigationItem.title = "Events"
-        configureTabAndNavigationControllers(navigationController?.navigationBar)
         tableView.contentInset.top = CGFloat(50)
         tableView.contentInset.bottom = CGFloat(70)
-        
+    }
+
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        configureTabAndNavigationControllers(self.navigationController?.navigationBar)
     }
     
     func configureTabAndNavigationControllers(navBar: UINavigationBar!) {
