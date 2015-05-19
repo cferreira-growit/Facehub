@@ -13,13 +13,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fhub" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="kId-c2-rCX">
-                    <rect key="frame" x="20" y="359" width="441" height="43"/>
+                    <rect key="frame" x="198" y="380" width="85" height="43"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loris" translatesAutoresizingMaskIntoConstraints="NO" id="4kc-wQ-eh8">
-                    <rect key="frame" x="120" y="73" width="240" height="240"/>
+                    <rect key="frame" x="120" y="120" width="240" height="240"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="4kc-wQ-eh8" secondAttribute="height" multiplier="1:1" id="aXg-Fq-Eiy"/>
                         <constraint firstAttribute="width" constant="240" id="oMD-FB-b6g"/>
@@ -28,16 +28,31 @@
             </subviews>
             <color key="backgroundColor" red="0.14509803921568629" green="0.14509803921568629" blue="0.14509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="kId-c2-rCX" firstAttribute="centerX" secondItem="4kc-wQ-eh8" secondAttribute="centerX" id="0Ht-q6-O04"/>
                 <constraint firstItem="kId-c2-rCX" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="bottom" multiplier="1/3" constant="220.5" id="5cJ-9S-tgC"/>
                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="kId-c2-rCX" secondAttribute="bottom" constant="78" id="6Dg-l4-Dlo"/>
+                <constraint firstItem="kId-c2-rCX" firstAttribute="top" secondItem="4kc-wQ-eh8" secondAttribute="bottom" constant="20" id="CKg-ha-V79"/>
                 <constraint firstAttribute="centerX" secondItem="kId-c2-rCX" secondAttribute="centerX" id="Koa-jz-hwk"/>
                 <constraint firstAttribute="centerX" secondItem="4kc-wQ-eh8" secondAttribute="centerX" id="Rqt-Vn-2BV"/>
                 <constraint firstItem="4kc-wQ-eh8" firstAttribute="top" relation="lessThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="top" constant="73" id="W7I-QF-mr4"/>
+                <constraint firstAttribute="centerY" secondItem="4kc-wQ-eh8" secondAttribute="centerY" id="Xvm-n5-OYw"/>
+                <constraint firstAttribute="centerX" secondItem="4kc-wQ-eh8" secondAttribute="centerX" id="bRc-HS-gws"/>
                 <constraint firstItem="kId-c2-rCX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="fvb-Df-36g"/>
                 <constraint firstItem="kId-c2-rCX" firstAttribute="top" secondItem="4kc-wQ-eh8" secondAttribute="bottom" constant="46" id="pqT-NZ-5zD"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="Rqt-Vn-2BV"/>
+                    <exclude reference="W7I-QF-mr4"/>
+                    <exclude reference="5cJ-9S-tgC"/>
+                    <exclude reference="6Dg-l4-Dlo"/>
+                    <exclude reference="Koa-jz-hwk"/>
+                    <exclude reference="fvb-Df-36g"/>
+                    <exclude reference="pqT-NZ-5zD"/>
+                </mask>
+            </variation>
             <point key="canvasLocation" x="548" y="455"/>
         </view>
     </objects>

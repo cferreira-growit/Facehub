@@ -4,3 +4,5 @@
 
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import <Parse/Parse.h>
+#import <Parse/PFObject+Subclass.h>

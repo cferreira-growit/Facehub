@@ -1,5 +1,5 @@
 //
-//  User.swift
+//  Event_Photos.swift
 //  Fhub
 //
 //  Created by Francisco Ferreira on 5/18/15.
@@ -7,24 +7,19 @@
 //
 
 import Foundation
-import Parse
 
-class User : PFUser, PFSubclassing{
+class EventPhoto : PFObject, PFSubclassing {
     
     override class func initialize() {
         struct Static { static var onceToken : dispatch_once_t = 0; }
         dispatch_once(&Static.onceToken) { self.registerSubclass() }
     }
+    override init(){ super.init() }
     
-    override class func currentUser() -> User {
-        return (PFUser.currentUser() as? User)!
-    }
+    static func parseClassName() -> String { return "Event_Photos" }
     
-    @NSManaged var facebookID: NSString!
-    @NSManaged var first_name: NSString!
-    @NSManaged var last_name: NSString!
+    @NSManaged var belongsTo: Event!
+    @NSManaged var name: NSString!
     @NSManaged var photo: PFFile!
-    
-    
-    var loadePhoto: UIImage!
+    @NSManaged var datetime: NSDate!
 }
