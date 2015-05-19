@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>7C2EABA4-FD7A-4CBF-A1B8-4C0C5E8D7677</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Fhub</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>4A17CA2FA3C8BAA726091ABFC6CCD6E0E5A1BF0C</key>
 		<string>https://github.com/cferreira-growit/Fhub.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Fhub/Fhub.xcodeproj/project.xcworkspace</string>
+	<string>Fhub/Fhub.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>4A17CA2FA3C8BAA726091ABFC6CCD6E0E5A1BF0C</key>
