@@ -36,7 +36,8 @@ class MyEventsCollectionViewController: UIViewController, UICollectionViewDataSo
         cell.coverImage.image = UIImage(named: "beco-cover")
         cell.coverImage.layer.cornerRadius = 10
         cell.coverImage.layer.masksToBounds = true
-        
+        cell.coverImage.alpha = 0.4
+                
         cell.iconImage.image = UIImage(named: "beco-icon")
         cell.iconImage.layer.cornerRadius = cell.iconImage.frame.size.width/2
         cell.iconImage.layer.masksToBounds = true
@@ -44,8 +45,6 @@ class MyEventsCollectionViewController: UIViewController, UICollectionViewDataSo
         if cell.coverImage.layer.sublayers != nil {
             cell.coverImage.layer.sublayers.removeAtIndex(0)
         }
-        
-        adddGradient(cell.bounds, gradient: cell.coverImage)
         
         return cell
     }
