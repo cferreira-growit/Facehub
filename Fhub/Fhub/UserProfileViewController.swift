@@ -37,7 +37,7 @@ class UserProfileViewController: UIViewController, UITableViewDataSource, UITabl
         userCoverProfilePhoto.layer.masksToBounds = true
         
         //addBlurEffect(userCoverProfilePhoto)
-        userCoverProfilePhoto.alpha = 0.2
+        userCoverProfilePhoto.alpha = 0.4
     }
     
     override func viewDidAppear(animated: Bool) {

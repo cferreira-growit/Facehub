@@ -15,4 +15,8 @@ class EventCustomTableViewCell: UITableViewCell {
     @IBOutlet weak var eventTitle: UILabel!
     @IBOutlet weak var eventDate: UILabel!
     @IBOutlet weak var gradientView: UIView!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
 }

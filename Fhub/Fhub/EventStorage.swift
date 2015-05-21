@@ -13,8 +13,9 @@ class EventStorage {
     // MARK: Event
     static func getAll(handler: ParseHandler){
         let eQry: PFQuery = Event.query()!
-
+        
         handler.onStart()
+        eQry.includeKey("createdBy")
         eQry.findObjectsInBackgroundWithBlock { (res: [AnyObject]?, err: NSError?) -> Void in
             if err == nil {
                 handler.onSuccess(ParseResult(dataSuccess: res as! [Event]))

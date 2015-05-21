@@ -103,7 +103,7 @@ class InitialController: UIViewController, UITextFieldDelegate {
         }, onSuccess: { (suc) -> Void in
             //Functions.displaySingleButtonAlertWithTitle("Success", message: "SignIn Success!\n\nIMPLEMENT THIS", view: self)
             
-            self.presentViewController(self.storyboard?.instantiateViewControllerWithIdentifier("EventsTableViewController") as! UINavigationController, animated: true, completion: nil)
+            self.presentViewController(self.storyboard?.instantiateViewControllerWithIdentifier("tabbarController") as! UITabBarController, animated: true, completion: nil)
             
         }, onError: { (err) -> Void in
             Functions.displayTwoButtonAlertWithTitle("Atention", message: "Invalid Credentials!\n\nWould you like to create a new account?", view: self, buttonOneTitle: "Yes", buttonOneBlock: { () -> () in
