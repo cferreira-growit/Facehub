@@ -16,7 +16,7 @@ class User : PFUser, PFSubclassing{
         dispatch_once(&Static.onceToken) { self.registerSubclass() }
     }
     
-    override class func currentUser() -> User {
+    override class func currentUser() -> User? {
         return (PFUser.currentUser() as? User)!
     }
     

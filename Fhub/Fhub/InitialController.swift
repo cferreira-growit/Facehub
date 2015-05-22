@@ -43,6 +43,11 @@ class InitialController: AppViewController, UITextFieldDelegate {
     }
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
+
+        assert(false, "GUI IMPLEMENT HERE MOTHAFUCK")
+//        if User.currentUser() != nil {
+//            self.presentViewController((self.storyboard?.instantiateViewControllerWithIdentifier("") as! UIViewController), animated: true, completion: nil)
+//        }
     }
     
     //MARK: Keyboard Methods
