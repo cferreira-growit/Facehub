@@ -59,6 +59,9 @@
 		759B8E9A1AE9D10900B500E6 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 759B8E8C1AE9D10900B500E6 /* StoreKit.framework */; };
 		759B8E9B1AE9D10900B500E6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 759B8E8D1AE9D10900B500E6 /* SystemConfiguration.framework */; };
 		759B8E9C1AE9D10900B500E6 /* WatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 759B8E8E1AE9D10900B500E6 /* WatchKit.framework */; };
+		75AE8C6D1B0CB34700C757AB /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AE8C6C1B0CB34700C757AB /* AddEventViewController.swift */; };
+		75AE8C6F1B0CB52A00C757AB /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AE8C6E1B0CB52A00C757AB /* AppViewController.swift */; };
+		75AE8C711B0CF60200C757AB /* GTImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AE8C701B0CF60200C757AB /* GTImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +132,9 @@
 		759B8E8D1AE9D10900B500E6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		759B8E8E1AE9D10900B500E6 /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = System/Library/Frameworks/WatchKit.framework; sourceTree = SDKROOT; };
 		759B8EA61AE9D3E900B500E6 /* Fhub-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Fhub-Bridging-Header.h"; sourceTree = "<group>"; };
+		75AE8C6C1B0CB34700C757AB /* AddEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
+		75AE8C6E1B0CB52A00C757AB /* AppViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
+		75AE8C701B0CF60200C757AB /* GTImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,27 +178,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		070AEB4C1AF7DE1E004BDE58 /* InitialController */ = {
-			isa = PBXGroup;
-			children = (
-				070AEB4D1AF7DE35004BDE58 /* InitialController.swift */,
-			);
-			name = InitialController;
-			sourceTree = "<group>";
-		};
-		0710D4BE1AEEF67600561946 /* Events */ = {
-			isa = PBXGroup;
-			children = (
-				0710D4BA1AEEE29E00561946 /* EventsTableViewController.swift */,
-			);
-			name = Events;
-			sourceTree = "<group>";
-		};
 		752E9DFB1B0A9B2B00AE96D4 /* Parse */ = {
 			isa = PBXGroup;
 			children = (
-				0710D4BA1AEEE29E00561946 /* EventsTableViewController.swift */,
-				07D6F5E21AFD7AE300CB882D /* MyEventsCollectionViewController.swift */,
 				752E9DFC1B0A9B3300AE96D4 /* User.swift */,
 				750366941B0AC0600033A8D4 /* Event.swift */,
 				750366961B0AC06A0033A8D4 /* EventPost.swift */,
@@ -202,14 +190,6 @@
 				7503669E1B0AC0840033A8D4 /* UserFriend.swift */,
 			);
 			name = Parse;
-			sourceTree = "<group>";
-		};
-		07B25E5F1B0506DD007E6EA4 /* User Profile */ = {
-			isa = PBXGroup;
-			children = (
-				07B25E601B0506F7007E6EA4 /* UserProfileViewController.swift */,
-			);
-			name = "User Profile";
 			sourceTree = "<group>";
 		};
 		759B8E3B1AE9CFEC00B500E6 = {
@@ -351,6 +331,7 @@
 				7587F32C1B0A9D1600AAEAD8 /* Functions.swift */,
 				7587F32D1B0A9D1600AAEAD8 /* ParseHandler.swift */,
 				7587F32E1B0A9D1600AAEAD8 /* ParseResult.swift */,
+				75AE8C701B0CF60200C757AB /* GTImageView.swift */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
@@ -358,11 +339,14 @@
 		759B8EA11AE9D14200B500E6 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				07B25E5F1B0506DD007E6EA4 /* User Profile */,
-				070AEB4C1AF7DE1E004BDE58 /* InitialController */,
+				75AE8C6E1B0CB52A00C757AB /* AppViewController.swift */,
 				759B8EA31AE9D15300B500E6 /* HeaderController */,
-				0710D4BE1AEEF67600561946 /* Events */,
 				759B8EA21AE9D14A00B500E6 /* CellController */,
+				070AEB4D1AF7DE35004BDE58 /* InitialController.swift */,
+				07B25E601B0506F7007E6EA4 /* UserProfileViewController.swift */,
+				0710D4BA1AEEE29E00561946 /* EventsTableViewController.swift */,
+				07D6F5E21AFD7AE300CB882D /* MyEventsCollectionViewController.swift */,
+				75AE8C6C1B0CB34700C757AB /* AddEventViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -497,19 +481,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				07B25E631B051717007E6EA4 /* ProfileCustomTableViweCell.swift in Sources */,
+				75AE8C6D1B0CB34700C757AB /* AddEventViewController.swift in Sources */,
 				07E179FF1AFD0C5D00A904F6 /* EventCustomTableViewHeader.swift in Sources */,
 				7503669F1B0AC0840033A8D4 /* UserFriend.swift in Sources */,
 				750366951B0AC0600033A8D4 /* Event.swift in Sources */,
 				0710D4BB1AEEE29E00561946 /* EventsTableViewController.swift in Sources */,
 				7587F3301B0A9D1600AAEAD8 /* Extensions.swift in Sources */,
 				070AEB4E1AF7DE35004BDE58 /* InitialController.swift in Sources */,
-				0710D4B81AEEBAF800561946 /* User.swift in Sources */,
 				07D6F5E51AFD869800CB882D /* MyEventsCustomCollectionViewCell.swift in Sources */,
 				07D6F5E31AFD7AE300CB882D /* MyEventsCollectionViewController.swift in Sources */,
 				07BA0B491B054EB900F56F56 /* ProfileAddressCustomTableViewCell.swift in Sources */,
-				759B8E4F1AE9CFEC00B500E6 /* ViewController.swift in Sources */,
 				7503669D1B0AC07E0033A8D4 /* UserConfig.swift in Sources */,
 				7587F3311B0A9D1600AAEAD8 /* Functions.swift in Sources */,
+				75AE8C711B0CF60200C757AB /* GTImageView.swift in Sources */,
 				750366991B0AC0700033A8D4 /* EventPhoto.swift in Sources */,
 				7503669B1B0AC0770033A8D4 /* EventParticipant.swift in Sources */,
 				7587F3321B0A9D1600AAEAD8 /* ParseHandler.swift in Sources */,
@@ -521,6 +505,7 @@
 				0710D4BD1AEEF63500561946 /* EventCustomTableViewCell.swift in Sources */,
 				752E9DFF1B0A9BF000AE96D4 /* UserStorage.swift in Sources */,
 				759B8E4D1AE9CFEC00B500E6 /* Fhub.xcdatamodeld in Sources */,
+				75AE8C6F1B0CB52A00C757AB /* AppViewController.swift in Sources */,
 				07B25E611B0506F7007E6EA4 /* UserProfileViewController.swift in Sources */,
 				759B8E4A1AE9CFEC00B500E6 /* AppDelegate.swift in Sources */,
 			);

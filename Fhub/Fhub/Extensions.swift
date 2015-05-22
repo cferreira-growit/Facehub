@@ -15,9 +15,9 @@ extension UInt32{
 }
 extension NSDate{
     convenience
-    init(dateString:String) {
+    init(dateString: String, format: String = "yyyy-MM-dd") {
         let dateStringFormatter = NSDateFormatter()
-        dateStringFormatter.dateFormat = "yyyy-MM-dd"
+        dateStringFormatter.dateFormat = format
         dateStringFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
         let d = dateStringFormatter.dateFromString(dateString)
         self.init(timeInterval:0, sinceDate:d!)

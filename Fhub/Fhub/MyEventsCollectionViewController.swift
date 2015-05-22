@@ -9,23 +9,20 @@
 import Foundation
 import UIKit
 
-class MyEventsCollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class MyEventsCollectionViewController: AppViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        super.clearCurrEvent()
         
         navigationItem.title = "My Events"
-        configureTabAndNavigationControllers(navigationController?.navigationBar)
         collectionView.contentInset.bottom = CGFloat(70)
     }
-    
-    func configureTabAndNavigationControllers(navBar: UINavigationBar!) {
-        navBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
-        navBar.shadowImage = UIImage()
-        navBar.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.8)
-        navBar.tintColor = UIColor.whiteColor()
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        super.setNavigationDefaultColors(self.navigationController?.navigationBar)
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {

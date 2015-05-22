@@ -25,7 +25,7 @@ class EventStorage {
             handler.onFinish()
         }
     }
-    static func add(name: NSString, information: NSString, datetime: NSDate, address: NSString, address_geo: PFGeoPoint, price: NSNumber, photo_profile: PFFile, handler: ParseHandler){
+    static func add(name: NSString, information: NSString, datetime: NSDate, address: NSString, address_geo: PFGeoPoint, price: NSNumber, photo_profile: PFFile, photo_cover: PFFile, handler: ParseHandler){
         var nEve: Event = Event()
         nEve.name = name
         nEve.information = information
@@ -34,6 +34,7 @@ class EventStorage {
         nEve.address_geo = address_geo
         nEve.price = price
         nEve.photo_profile = photo_profile
+        nEve.photo_cover = photo_cover
         nEve.createdBy = User.currentUser()
         
         handler.onStart()

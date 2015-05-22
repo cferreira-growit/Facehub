@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class InitialController: UIViewController, UITextFieldDelegate {
+class InitialController: AppViewController, UITextFieldDelegate {
     
     @IBOutlet weak var tfUsername: UITextField!
     @IBOutlet weak var tfPassword: UITextField!
@@ -41,11 +41,9 @@ class InitialController: UIViewController, UITextFieldDelegate {
             f.attributedPlaceholder = NSAttributedString(string: f.placeholder!, attributes: [NSForegroundColorAttributeName: UIColor.whiteColor().colorWithAlphaComponent(0.5)])
         }
     }
-    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
     }
-    
     
     //MARK: Keyboard Methods
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
@@ -82,7 +80,6 @@ class InitialController: UIViewController, UITextFieldDelegate {
         return true
     }
 
-
     // MARK: Touch Buttons
     @IBAction func onTouchLogin(sender: UIButton) {
         UIView.animateWithDuration(0.5, animations: { () -> Void in
@@ -107,6 +104,8 @@ class InitialController: UIViewController, UITextFieldDelegate {
             
         }, onError: { (err) -> Void in
             Functions.displayTwoButtonAlertWithTitle("Atention", message: "Invalid Credentials!\n\nWould you like to create a new account?", view: self, buttonOneTitle: "Yes", buttonOneBlock: { () -> () in
+                
+                self.tfUsernameSign.text = self.tfUsername.text
                 
             }, buttonTwoTitle: "No")
         }, onFinish: { () -> Void in

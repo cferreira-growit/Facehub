@@ -10,7 +10,9 @@ import UIKit
 
 class AppCore: NSObject {
     
-    class var sharedInstance: AppCore {
+    var currEvent: Event?
+    
+    class var ref: AppCore {
         struct Static {
             static var instance: AppCore?
             static var token: dispatch_once_t = 0

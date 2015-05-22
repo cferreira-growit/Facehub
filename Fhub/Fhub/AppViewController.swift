@@ -14,11 +14,25 @@ class AppViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    // MARK: Class Functions
+    func setNavigationDefaultColors(bar:UINavigationBar!){
+        self.setNavigationDefaultColorsWithTitleColor(UIColor.whiteColor(), bar: bar)
+    }
+    
+    func setNavigationDefaultColorsWithTitleColor(titleColor: UIColor, bar:UINavigationBar!){
+        bar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+        bar.shadowImage = UIImage()
+        bar.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.8)
+        bar.tintColor = UIColor.whiteColor()
+        bar.titleTextAttributes = [NSForegroundColorAttributeName:titleColor]
+    }
+    
+    func clearCurrEvent(){
+        AppCore.ref.currEvent = nil
     }
 }

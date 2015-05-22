@@ -9,12 +9,13 @@
 import Foundation
 import UIKit
 
-class EventsTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class EventsTableViewController: AppViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        super.clearCurrEvent()
         
         navigationItem.title = "Events"
         tableView.contentInset.top = CGFloat(50)
@@ -23,14 +24,7 @@ class EventsTableViewController: UIViewController, UITableViewDelegate, UITableV
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        configureTabAndNavigationControllers(self.navigationController?.navigationBar)
-    }
-    
-    func configureTabAndNavigationControllers(navBar: UINavigationBar!) {
-        navBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
-        navBar.shadowImage = UIImage()
-        navBar.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.5)
-        navBar.tintColor = UIColor.whiteColor()
+        super.setNavigationDefaultColors(self.navigationController?.navigationBar)
     }
     
     //MARK:  - TableVewDataSource

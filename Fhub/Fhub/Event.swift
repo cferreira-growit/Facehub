@@ -22,6 +22,7 @@ class Event : PFObject, PFSubclassing {
     @NSManaged var eventFacebookID: NSString!
     @NSManaged var name: NSString!
     @NSManaged var information: NSString!
+    @NSManaged var color: [NSNumber]!
     @NSManaged var age_restriction: NSNumber!
     @NSManaged var phone_contact: NSString!
     @NSManaged var email_contact: NSString!
@@ -37,4 +38,12 @@ class Event : PFObject, PFSubclassing {
     @NSManaged var photo_profile: PFFile!
     @NSManaged var photo_cover: PFFile!
     @NSManaged var photo_background: PFFile!
+    
+    var loadedProfile: UIImage!
+    var loadedCover: UIImage!
+    var loadedBackground: UIImage!
+    
+    func getColor() -> UIColor{
+        return UIColor(red: CGFloat(Float(self.color[0])), green: CGFloat(Float(self.color[1])), blue: CGFloat(Float(self.color[2])), alpha: CGFloat(Float(self.color[3])))
+    }
 }

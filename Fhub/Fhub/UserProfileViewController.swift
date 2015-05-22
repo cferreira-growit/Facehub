@@ -16,7 +16,7 @@ var data = [0: "botu_voadora@botu.com.br",
 
 var type = [0: "E-mail", 1: "RG", 2: "Birthday",3: "Address"]
 
-class UserProfileViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class UserProfileViewController: AppViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var userProfilePhoto: UIImageView!
     @IBOutlet weak var userCoverProfilePhoto: UIImageView!
@@ -28,6 +28,7 @@ class UserProfileViewController: UIViewController, UITableViewDataSource, UITabl
     //MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        super.clearCurrEvent()
         
         navigationItem.title = "Profile"
         configureTabAndNavigationControllers(navigationController?.navigationBar)
