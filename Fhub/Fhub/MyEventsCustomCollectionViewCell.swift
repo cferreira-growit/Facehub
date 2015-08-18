@@ -14,4 +14,5 @@ class MyEventsCustomCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var coverImage: UIImageView!
     @IBOutlet weak var iconImage: UIImageView!
     @IBOutlet weak var titleEvent: UILabel!
+    @IBOutlet weak var glowEffectImage: UIImageView!
 }

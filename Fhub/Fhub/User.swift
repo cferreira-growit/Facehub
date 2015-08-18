@@ -24,7 +24,10 @@ class User : PFUser, PFSubclassing{
     @NSManaged var first_name: NSString!
     @NSManaged var last_name: NSString!
     @NSManaged var photo: PFFile!
-    
+    @NSManaged var rg: NSString! 
+    @NSManaged var birthday: NSDate!
+    @NSManaged var location_geo: PFGeoPoint!
+    @NSManaged var location: NSString!
     
     var loadePhoto: UIImage!
 }

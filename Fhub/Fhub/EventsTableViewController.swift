@@ -30,7 +30,7 @@ class EventsTableViewController: UIViewController, UITableViewDelegate, UITableV
         configureTabAndNavigationControllers()
         
         
-        EventStorage.getAll(ParseHandler().handlerWithOnStart({ () -> Void in
+        EventStorage.getAll(orderByDate: true, handler: ParseHandler().handlerWithOnStart({ () -> Void in
             }, onSuccess: { (suc : ParseResult) -> Void in
                 self.events = suc.Data as! [Event]
             }, onError: { (err) -> Void in
@@ -53,7 +53,7 @@ class EventsTableViewController: UIViewController, UITableViewDelegate, UITableV
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         
         //Tab
-        self.tabBarController!.tabBar.backgroundImage = UIImage()
+        self.tabBarController?.tabBar.backgroundImage = UIImage()
         self.tabBarController?.tabBar.shadowImage = UIImage()
         self.tabBarController?.tabBar.tintColor = UIColor.whiteColor()
         self.tabBarController?.tabBar.barTintColor = UIColor.blackColor().colorWithAlphaComponent(0.7)
@@ -65,14 +65,16 @@ class EventsTableViewController: UIViewController, UITableViewDelegate, UITableV
         let  headerCell = tableView.dequeueReusableCellWithIdentifier("EventHeader") as! EventCustomTableViewHeader
         
         let event = events[section]
-        
+       
+        headerCell.hostImageProfile.alpha = 0.0
         event.photo_profile.getDataInBackgroundWithBlock({ (data, err) -> Void in
             
-            headerCell.hostImageProfile.alpha = 0.0
-            headerCell.hostImageProfile.image = UIImage(data: data!)!
-            UIView.animateWithDuration(1.0, animations: { () -> Void in
-                headerCell.hostImageProfile.alpha = 1.0
-            })
+            if err == nil {
+                headerCell.hostImageProfile.image = UIImage(data: data!)!
+                UIView.animateWithDuration(1.0, animations: { () -> Void in
+                    headerCell.hostImageProfile.alpha = 1.0
+                })
+            }
         })
 
         headerCell.hostName.text = event.createdBy.username
@@ -106,16 +108,20 @@ class EventsTableViewController: UIViewController, UITableViewDelegate, UITableV
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("EventCell") as! EventCustomTableViewCell
 
+        cell.eventCoverImage.alpha = 0.0
+        cell.gradientView.alpha = 0.0
         
         if let event = events[indexPath.section] as Event? {
-        
+
             event.photo_cover.getDataInBackgroundWithBlock({ (data, err) -> Void in
                 
-                cell.eventCoverImage.alpha = 0.0
-                cell.eventCoverImage.image = UIImage(data: data!)!
-                UIView.animateWithDuration(1.0, animations: { () -> Void in
-                    cell.eventCoverImage.alpha = 1.0
-                })
+                if err == nil {
+                    cell.eventCoverImage.image = UIImage(data: data!)!
+                    UIView.animateWithDuration(1.0, animations: { () -> Void in
+                        cell.gradientView.alpha = 1.0
+                        cell.eventCoverImage.alpha = 1.0
+                    })
+                }
             })
             cell.eventCoverImage.layer.masksToBounds = true
         

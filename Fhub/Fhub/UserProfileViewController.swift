@@ -9,10 +9,6 @@
 import Foundation
 import UIKit
 
-var data = [0: "botu_voadora@botu.com.br",
-                1: "6969696969",
-                2: "30/09/1993",
-                3: "Mar"]
 
 var type = [0: "E-mail", 1: "RG", 2: "Birthday",3: "Address"]
 
@@ -21,9 +17,12 @@ class UserProfileViewController: UIViewController, UITableViewDataSource, UITabl
     @IBOutlet weak var userProfilePhoto: UIImageView!
     @IBOutlet weak var userCoverProfilePhoto: UIImageView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var username: UILabel!
+    @IBOutlet weak var name: UILabel!
     
     //MARK: - Variables
     var isEnableFields: Bool = false
+    var data = []
     
     //MARK: - View Lifecycle
     override func viewDidLoad() {
@@ -38,6 +37,58 @@ class UserProfileViewController: UIViewController, UITableViewDataSource, UITabl
         
         //addBlurEffect(userCoverProfilePhoto)
         userCoverProfilePhoto.alpha = 0.4
+        
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "dd/MMM/yyyy"
+        var birthday: String!
+        var email: String!
+        var location: String!
+        var rg: String!
+        
+        if let date = User.currentUser().birthday as NSDate? {
+            birthday = formatter.stringFromDate(date)
+        } else {
+            birthday = "Preencha a data de seu nascimento"
+        }
+        
+        if let em = User.currentUser().email as String? {
+            email = em
+        } else {
+            email = "E-mail não informado"
+        }
+        
+        if let loc = User.currentUser().location as String? {
+            location = loc
+        } else {
+            location = "Endereço não informado"
+        }
+        
+        if let userRG = User.currentUser().rg as String? {
+            rg = userRG
+        } else {
+            rg = "RG não informado"
+        }
+
+        self.data = [email,
+                    rg,
+                    birthday,
+                    location]
+        
+        self.username.text = User.currentUser().username
+        self.name.text = "\(User.currentUser().first_name) \(User.currentUser().last_name)"
+        
+        User.currentUser().photo.getDataInBackgroundWithBlock { (data, err) -> Void in
+            if err == nil {
+                self.userProfilePhoto.image = UIImage(data: data!)
+            }
+        }
+        
+        User.currentUser().photo.getDataInBackgroundWithBlock { (data, err) -> Void in
+            if err == nil {
+                self.userCoverProfilePhoto.image = UIImage(data: data!)
+            }
+        }
+        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -87,16 +138,21 @@ class UserProfileViewController: UIViewController, UITableViewDataSource, UITabl
             cell.dataType.text = type[indexPath.row]
             
             if !isEnableFields && indexPath.row == 1 {
+                var originalRG: String
                 
-                var originalRG: String = data[indexPath.row]!
-                let startIndex = advance(originalRG.startIndex, 0)
-                let endIndex = advance(startIndex, 4)
-                let range = startIndex..<endIndex
-                let customRG = originalRG[range]
-                
-                cell.dataTextField.text = customRG + "XXXX"
+                if data[indexPath.row] as! String != "RG não informado" {
+                    originalRG = data[indexPath.row] as! String
+                    
+                    let startIndex = advance(originalRG.startIndex, 0)
+                    let endIndex = advance(startIndex, 4)
+                    let range = startIndex..<endIndex
+                    let customRG = originalRG[range]
+                    cell.dataTextField.text = customRG + "XXXX"
+                } else {
+                    cell.dataTextField.text = data[indexPath.row] as! String
+                }
             } else {
-                cell.dataTextField.text = data[indexPath.row]
+                cell.dataTextField.text = data[indexPath.row] as! String
             }
             
             cell.dataTextField.enabled = isEnableFields
@@ -106,7 +162,7 @@ class UserProfileViewController: UIViewController, UITableViewDataSource, UITabl
             let cell = tableView.dequeueReusableCellWithIdentifier("UserAddressCell", forIndexPath: indexPath) as! ProfileAddressCustomTableViewCell
             
             cell.dataType.text = type[indexPath.row + 3]
-            cell.addressButton.setTitle(data[indexPath.row + 3], forState: UIControlState.Normal)
+            cell.addressButton.setTitle(data[indexPath.row + 3] as? String, forState: UIControlState.Normal)
             
             return cell
         }

@@ -11,11 +11,15 @@ import Foundation
 class EventStorage {
     
     // MARK: Event
-    static func getAll(handler: ParseHandler){
+    static func getAll(orderByDate: Bool = false, handler: ParseHandler){
         let eQry: PFQuery = Event.query()!
-        
         handler.onStart()
         eQry.includeKey("createdBy")
+        
+        if orderByDate {
+            eQry.orderByAscending("datetime")
+        }
+        
         eQry.findObjectsInBackgroundWithBlock { (res: [AnyObject]?, err: NSError?) -> Void in
             if err == nil {
                 handler.onSuccess(ParseResult(dataSuccess: res as! [Event]))

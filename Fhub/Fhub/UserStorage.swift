@@ -55,4 +55,26 @@ class UserStorage {
             handler.onFinish()
         })
     }
+    
+    static func getMyEvents(orderByDate: Bool = false, handler: ParseHandler){
+        var eQry = EventParticipant.query()!
+        
+        eQry.includeKey("belongsTo")
+        eQry.whereKey("participantIS", equalTo: User.currentUser())
+        
+        if orderByDate {
+            eQry.orderByAscending("datetime")
+        }
+        
+        handler.onStart()
+        eQry.findObjectsInBackgroundWithBlock { (res: [AnyObject]?, err: NSError?) -> Void in
+            if err == nil {
+                handler.onSuccess(ParseResult(dataSuccess: res as! [EventParticipant]))
+            }
+            else {
+                handler.onError(ParseResult(dataError: err!))
+            }
+            handler.onFinish()
+        }
+    }
 }

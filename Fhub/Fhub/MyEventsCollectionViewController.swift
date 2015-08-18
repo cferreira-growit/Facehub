@@ -13,12 +13,39 @@ class MyEventsCollectionViewController: UIViewController, UICollectionViewDataSo
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    //MARK: - Variables
+    var myEvents: [EventParticipant]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        myEvents = []
         
         navigationItem.title = "My Events"
         configureTabAndNavigationControllers(navigationController?.navigationBar)
         collectionView.contentInset.bottom = CGFloat(70)
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+
+        UserStorage.getMyEvents(orderByDate: true, handler: ParseHandler().handlerWithOnStart({ () -> Void in
+            }, onSuccess: { (suc: ParseResult) -> Void in
+                self.myEvents = suc.Data as! [EventParticipant]
+                self.collectionView.reloadData()
+            }, onError: { (err: ParseResult) -> Void in
+                println(err)
+            }, onFinish: { () -> Void in
+        }))
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.myEvents = []
+        self.collectionView.reloadData()
     }
     
     func configureTabAndNavigationControllers(navBar: UINavigationBar!) {
@@ -31,26 +58,47 @@ class MyEventsCollectionViewController: UIViewController, UICollectionViewDataSo
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let  cell = collectionView.dequeueReusableCellWithReuseIdentifier("MyEvents", forIndexPath: indexPath) as! MyEventsCustomCollectionViewCell
         
-        cell.titleEvent.text = "Clube da Luta"
+        let event = myEvents[indexPath.row]
         
-        cell.coverImage.image = UIImage(named: "beco-cover")
+        cell.titleEvent.text = event.belongsTo.name as String
+        
         cell.coverImage.layer.cornerRadius = 10
         cell.coverImage.layer.masksToBounds = true
-        cell.coverImage.alpha = 0.4
-                
-        cell.iconImage.image = UIImage(named: "beco-icon")
+
+        cell.coverImage.alpha = 0.0
+        event.belongsTo.photo_cover.getDataInBackgroundWithBlock { (data , err) -> Void in
+            
+            if err == nil {
+                cell.coverImage.image = UIImage(data: data!)!
+                UIView.animateWithDuration(1.0, animations: { () -> Void in
+                    cell.coverImage.alpha = 0.4
+                })
+            }
+        }
+        
         cell.iconImage.layer.cornerRadius = cell.iconImage.frame.size.width/2
         cell.iconImage.layer.masksToBounds = true
         
-        if cell.coverImage.layer.sublayers != nil {
-            cell.coverImage.layer.sublayers.removeAtIndex(0)
+        cell.glowEffectImage.alpha = 0.0
+        cell.iconImage.alpha = 0.0
+        
+        event.belongsTo.photo_profile.getDataInBackgroundWithBlock { (data , err) -> Void in
+            
+            if err == nil {
+                cell.iconImage.image = UIImage(data: data!)!
+                cell.glowEffectImage.image = UIImage(named: "Glow-effect")
+                UIView.animateWithDuration(1.0, animations: { () -> Void in
+                    cell.glowEffectImage.alpha = 1.0
+                    cell.iconImage.alpha = 1.0
+                })
+            }
         }
         
         return cell
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return self.myEvents.count
     }
     
     func collectionView(collectionView: UICollectionView!, layout collectionViewLayout: UICollectionViewLayout!,
